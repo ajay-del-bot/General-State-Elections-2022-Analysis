@@ -1,0 +1,173 @@
+{
+    "hello":"hi",
+    "statewise": [
+        {
+            "state": "Andhra Pradesh",
+            "capital": "Amaravati",
+            "governor": "Biswabhushan Harichandan",
+            "cm": "Y. S. Jagan Mohan Reddy"
+        },
+        {
+            "state": "Arunachal Pradesh",
+            "capital": "Itanagar",
+            "governor": "Brigadier B.D Mishra (Retd)",
+            "cm": "Pema Khandu"
+        },
+        {
+            "state": "Assam",
+            "capital": "Dispur",
+            "governor": "Jagdish Mukhi",
+            "cm": "Himanta Biswa Sarma"
+        },
+        {
+            "state": "Bihar",
+            "capital": "Patna",
+            "governor": "Phagu Chauhan",
+            "cm": "Nitish Kumar"
+        },
+        {
+            "state": "Chhattisgarh",
+            "capital": "Naya Raipur/Bilaspur",
+            "governor": "Anusuiya Uikey",
+            "cm": "Bhupesh Bhagel"
+        },
+        {
+            "state": "Goa",
+            "capital": "Panaji",
+            "governor": "PS Sreedharan Pillai",
+            "cm": "Pramod Sawant"
+        },
+        {
+            "state": "Gujarat",
+            "capital": "Gandhinagar",
+            "governor": "Acharya Devvrat",
+            "cm": "Vijay Rupani"
+        },
+        {
+            "state": "Haryana",
+            "capital": "Chandigarh",
+            "governor": "Bandaru Dattatreya",
+            "cm": "Manohar Lal Khattar"
+        },
+        {
+            "state": "Himachal Pradesh",
+            "capital": "Summer Capital: Shimla\nWinter Capital: Dharamshala",
+            "governor": "Rajendra Vishwanath Arlekar",
+            "cm": "Jai Ram Thakur"
+        },
+        {
+            "state": "Jharkhand",
+            "capital": "Ranchi",
+            "governor": "Ramesh Bais",
+            "cm": "Hemant Soren"
+        },
+        {
+            "state": "Karnataka",
+            "capital": "Bengaluru",
+            "governor": "Thawar Chand Gehlot",
+            "cm": "Sri Basavaraj Bommai"
+        },
+        {
+            "state": "Kerala",
+            "capital": "Thiruvananthapuram",
+            "governor": "Arif Mohammed Khan",
+            "cm": "Pinarayi Vijayan"
+        },
+        {
+            "state": "Madhya Pradesh",
+            "capital": "Bhopal",
+            "governor": "Mangubhai Chaganbhai Patel",
+            "cm": "Shivraj Singh Chouhan"
+        },
+        {
+            "state": "Maharashtra",
+            "capital": "Mumbai",
+            "governor": "Bhagat Singh Koshyari",
+            "cm": "Uddhav Thackeray"
+        },
+        {
+            "state": "Manipur",
+            "capital": "Imphal",
+            "governor": "Shri La. Ganesan",
+            "cm": "N. Biren Singh"
+        },
+        {
+            "state": "Meghalaya",
+            "capital": "Shillong",
+            "governor": "Satya Pal Malik",
+            "cm": "Conrad Kongkal Sangma"
+        },
+        {
+            "state": "Mizoram",
+            "capital": "Aizwal",
+            "governor": "Dr. Kambhampati Haribabu",
+            "cm": "Zoramthanga"
+        },
+        {
+            "state": "Nagaland",
+            "capital": "Kohima",
+            "governor": "R. N Ravi",
+            "cm": "Neiphiu Rio"
+        },
+        {
+            "state": "Odisha",
+            "capital": "Bhubaneshwar",
+            "governor": "Prof. Ganeshi Lal Mathur\u00a0",
+            "cm": "Naveen Patnaik"
+        },
+        {
+            "state": "Punjab",
+            "capital": "Chandigarh",
+            "governor": "Shri Banwarilal Purohit",
+            "cm": "Captain Amrinder Singh"
+        },
+        {
+            "state": "Rajasthan",
+            "capital": "Jaipur",
+            "governor": "Kalraj Mishra",
+            "cm": "Ashok Gehlot"
+        },
+        {
+            "state": "Sikkim",
+            "capital": "Gangtok",
+            "governor": "Ganga Prasad",
+            "cm": "Prem Singh Tamang (PS Golay)"
+        },
+        {
+            "state": "Tamil Nadu",
+            "capital": "Chennai",
+            "governor": "Banwarilal Purohit",
+            "cm": "M. K. Stalin"
+        },
+        {
+            "state": "Telangana",
+            "capital": "Hyderabad",
+            "governor": "Dr Tamilisai Soundararajan",
+            "cm": "K. Chandrashekhar Rao"
+        },
+        {
+            "state": "Tripura",
+            "capital": "Agartala",
+            "governor": "Satyadev Narayan Arya",
+            "cm": "Biplab Kumar Deb"
+        },
+        {
+            "state": "Uttar Pradesh",
+            "capital": "Lucknow",
+            "governor": "Anandiben Patel",
+            "cm": "Yogi Adityanath"
+        },
+        {
+            "state": "Uttarakhand",
+            "capital": "Winter Capital: Dehradun\nSummer Capital: Gairsain",
+            "governor": "Baby Rani Maurya",
+            "cm": "Shri Pushkar Singh Dhami"
+        },
+        {
+            "state": "West Bengal",
+            "capital": "Kolkata",
+            "governor": "Jagdeep Dhankar",
+            "cm": "Mamata Banerjee"
+        }
+    ]
+}
