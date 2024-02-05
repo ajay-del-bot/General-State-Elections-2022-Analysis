@@ -41,10 +41,11 @@ Building a classification model to predict the popularity of Indian political pa
 
 ![image](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/b4c6fc98-02a4-494b-bf80-6eaa03e98940)
 
+
 ## SCREENSHOTS
 
-![image](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/555503a3-8683-4bcf-8de5-5f9cd8cf2d1f)
-![HomePage2](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/1a12f52e-d257-4b50-9032-e4aef0e98875)
+!![HomePage1](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/f8355663-f98e-4811-b783-2aaabf57d20d)
+ ![HomePage2](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/1a12f52e-d257-4b50-9032-e4aef0e98875)
 ![States](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/2b4f1cc3-3d1c-42c5-b5d5-2fd65a47e157)
 ![UP1](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/ee45ae67-af38-48ec-8f62-9dfcb46afdd9)
 ![UP-BJP2](https://github.com/ajay-del-bot/General-State-Elections-2022-Analysis/assets/56514070/43619a65-9151-4b3e-9688-95c7ba0fb60b)
