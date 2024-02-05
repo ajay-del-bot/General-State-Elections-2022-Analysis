@@ -1,0 +1,387 @@
+{% extends 'base.html' %}
+{% block title %} Home{% endblock title %}
+{% block body %}
+
+<!-- ======= Header ======= -->
+
+<header id="header" class="header-full d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+
+    <div id="logo" class="me-auto">
+      <a href="javascript:window.location.href=window.location.href" style="text-transform:uppercase;" class="nav_head">{{name}}</a>
+
+    </div>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <div class="container">
+
+        <ul>
+          <li><a class="nav-link scrollto active" href="" onclick="window.open('/', '_self')">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#about">About</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#features">Features</a></li> -->
+          <li class="dropdown"><a href="#" style="text-decoration: none;"><span>Track Result</span><i
+                class="fa-solid fa-angle-down"></i></a>
+            <ul>
+              <li><a href="#" onclick="window.open('/states/Uttar Pradesh', '_self')" style="text-decoration: none;">Uttar Pradesh</a></li>
+              <li><a href="#" onclick="window.open('/states/Uttarakhand', '_self')" style="text-decoration: none;">Uttarakhand</a></li>
+              <li><a href="#" onclick="window.open('/states/Punjab', '_self')" style="text-decoration: none;">Punjab</a></li>
+              <li><a href="#" onclick="window.open('/states/Manipur', '_self')" style="text-decoration: none;">Manipur</a></li>
+              <li><a href="#" onclick="window.open('/states/Goa', '_self')" style="text-decoration: none;">Goa</a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+        </ul>
+      </div>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <div class="header-social-links d-flex align-items-center">
+      <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</header>
+<!-- End Header -->
+
+<!-- Display Graph -->
+<div class="row">
+  <select id="selectBox" class="form-select form-select-lg mb-3" onchange="changeFunc()"
+    style="width: 50%;margin-top: 40px; margin-left: 350px;" aria-label=".form-select-lg example">
+    <option selected id="all_parties" value="result">Results</option>
+    <option id="party_one" value="1">One</option>
+    <option id="party_two" value="2">Two</option>
+    <option id="party_three" value="3">Three</option>
+  </select>
+</div>
+<div class="row">
+  <!-- <div class="col-md-6 card" id="div1" style="width: 40rem; height: 30rem; margin-left: 320px;">
+    <h3 id="head_tag" style="margin-bottom: 30px;"></h3>
+    <img id="party_first_image" class="card-img-top" alt="Card image cap" height="400">
+  </div>
+  <div class="col-md-6 card" style="margin-top: 2rem;margin-left: 320px;width: 40rem;">
+    <img id="party_second_image" class="card-img-top" alt="Card image cap" height="350">
+  </div> -->
+  <iframe id="tableau" src=""
+  seamless="seamless"  style="margin-left: 200px; margin-top:30px; height:877px;width:100%; overflow='auto'"></iframe>
+
+</div>
+
+
+<script>
+  let name = '{{name}}'
+  // Setting The Combo Box
+  if (name === "Uttar Pradesh") {
+    let party_one = document.getElementById("party_one")
+    party_one.innerHTML = "Bharatiya Janata Party";
+    party_one.value = "Bharatiya Janata Party"
+    let party_two = document.getElementById("party_two")
+    party_two.value = "Indian National Congress"
+    party_two.innerHTML = "Indian National Congress"
+    let party_three = document.getElementById("party_three")
+    party_three.innerHTML = "Samajwadi Party"
+    party_three.value = "Samajwadi Party"
+    // var img1 = document.getElementById("party_first_image")
+    // var img2 = document.getElementById("party_second_image")
+    // img1.src = "{{url_for('static',filename='img/UP/UP1.png')}}"
+    // img1.width = 300
+    // img2.src = "{{url_for('static',filename='img/UP/UP2.png')}}"
+    // var headTag = document.getElementById("head_tag")
+    // headTag.innerHTML = "Uttar Pradesh Results"
+
+    document.getElementById("tableau").src = "https://public.tableau.com/views/UP_16504878526800/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+  }
+  else if (name === "Punjab") {
+    let party_one = document.getElementById("party_one")
+    party_one.innerHTML = "Aam Aadmi Party";
+    let party_two = document.getElementById("party_two")
+    party_two.innerHTML = "Indian National Congress"
+    let party_three = document.getElementById("party_three")
+    party_three.innerHTML = "Shiromani Akali Dal (SAD)"
+    // var img1 = document.getElementById("party_first_image")
+    // var img2 = document.getElementById("party_second_image")
+    // img1.src = "{{url_for('static',filename='img/PB/Punjab1.png')}}"
+    // img1.width = 300
+    // img2.src = "{{url_for('static',filename='img/PB/Punjab2.png')}}"
+    // var headTag = document.getElementById("head_tag")
+    // headTag.innerHTML = "Punjab Results"
+    document.getElementById("tableau").src = "https://public.tableau.com/views/Punjab_16504869494380/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+  }
+  else if (name === "Manipur") {
+    let party_one = document.getElementById("party_one")
+    party_one.innerHTML = "Bharatiya Janata Party";
+    let party_two = document.getElementById("party_two")
+    party_two.innerHTML = "Indian National Congress"
+    let party_three = document.getElementById("party_three")
+    party_three.innerHTML = "Naga People's Front (NPF)"
+    // var img1 = document.getElementById("party_first_image")
+    // var img2 = document.getElementById("party_second_image")
+    // img1.src = "{{url_for('static',filename='img/Manipur/Manipur1.png')}}"
+    // img1.width = 300
+    // img2.src = "{{url_for('static',filename='img/Manipur/Manipur2.png')}}"
+    // var headTag = document.getElementById("head_tag")
+    // headTag.innerHTML = "Manipur Results"
+    document.getElementById("tableau").src = "https://public.tableau.com/views/Manipur_16504864272650/Dashboard2?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+  }
+  else if (name === "Goa") {
+    let party_one = document.getElementById("party_one")
+    party_one.innerHTML = "Bharatiya Janata Party";
+    let party_two = document.getElementById("party_two")
+    party_two.innerHTML = "Indian National Congress"
+    let party_three = document.getElementById("party_three")
+    party_three.innerHTML = "Aam Aadmi Party"
+    // var img1 = document.getElementById("party_first_image")
+    // var img2 = document.getElementById("party_second_image")
+    // img1.src = "{{url_for('static',filename='img/Goa/Goa1.png')}}"
+    // img1.width = 300
+    // img2.src = "{{url_for('static',filename='img/Goa/Goa2.png')}}"
+    // var headTag = document.getElementById("head_tag")
+    // headTag.innerHTML = "Goa Results"
+    document.getElementById("tableau").src = "https://public.tableau.com/views/Goa_16504752674710/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+  }
+  else if (name === "Uttarakhand") {
+    let party_one = document.getElementById("party_one")
+    party_one.innerHTML = "Bharatiya Janata Party";
+    let party_two = document.getElementById("party_two")
+    party_two.innerHTML = "Indian National Congress"
+    let party_three = document.getElementById("party_three")
+    party_three.innerHTML = "Aam Aadmi Party"
+    // var img1 = document.getElementById("party_first_image")
+    // var img2 = document.getElementById("party_second_image")
+    // img1.src = "{{url_for('static',filename='img/UK/UK1.png')}}"
+    // img1.width = 300
+    // img2.src = "{{url_for('static',filename='img/UK/UK2.png')}}"
+    // var headTag = document.getElementById("head_tag")
+    // headTag.innerHTML = "Uttarakhand Results"
+    document.getElementById("tableau").src = "https://public.tableau.com/views/UK_16504874701480/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+  }
+
+  // Changing Images according to parties and states
+  function changeFunc() {
+    var selectBox = document.getElementById("selectBox")
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    console.log("This is ,", selectedValue);
+    var img1 = document.getElementById("party_first_image")
+    var img2 = document.getElementById("party_second_image")
+    var headTag = document.getElementById("head_tag")
+    if (name === "Uttar Pradesh") {
+
+      if (selectedValue == "result") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-BJP1.png')}}"
+        // headTag.innerHTML = "UP BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/UP_16504878526800/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+
+      if (selectedValue == "Bharatiya Janata Party") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-BJP1.png')}}"
+        // headTag.innerHTML = "UP BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-UPBJP/UP-BJP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+      if (selectedValue == "Indian National Congress") {
+
+        // img1.src = "{{url_for('static',filename='img/UP/UP-INC2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-INC1.png')}}"
+        // headTag.innerHTML = "UP INC"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-UPINC/UP-INC?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+      if (selectedValue == "Samajwadi Party") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-SP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-SP1.png')}}"
+        // headTag.innerHTML = "UP SP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-UPSP/UP-SP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+    }
+    if (name === "Punjab") {
+
+      if (selectedValue == "result") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-BJP1.png')}}"
+        // headTag.innerHTML = "UP BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/Punjab_16504869494380/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+      }
+
+      if (selectedValue == 1) {
+        // img1.src = "{{url_for('static',filename='img/PB/Punjab-AAP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/PB/Punjab-AAP1.png')}}"
+        // headTag.innerHTML = "Punjab AAP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-PunjabAAP/Punjab-AAP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+      if (selectedValue == 2) {
+        // img1.src = "{{url_for('static',filename='img/PB/Punjab-INC2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/PB/Punjab-INC1.png')}}"
+        // headTag.innerHTML = "Punjab INC"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-PunjabINC/Punjab-INC?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+      if (selectedValue == 3) {
+        // img1.src = "{{url_for('static',filename='img/PB/Punjab-SAD2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/PB/Punjab-SAD1.png')}}"
+        // headTag.innerHTML = "Punjab SAD"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-PunjabSAD/Punjab-SAD?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+      }
+    }
+    if (name === "Uttarakhand") {
+
+      if (selectedValue == "result") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-BJP1.png')}}"
+        // headTag.innerHTML = "UP BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/UK_16504874701480/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+      }
+
+      if (selectedValue == 1) {
+        // img1.src = "{{url_for('static',filename='img/UK/UK-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UK/UK-BJP1.png')}}"
+        // headTag.innerHTML = "UK BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-UKBJP/UK-BJP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+      if (selectedValue == 3) {
+        // img1.src = "{{url_for('static',filename='img/UK/UK-AAP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UK/UK-AAP1.png')}}"
+        // headTag.innerHTML = "UK AAP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-UKAAP/UK-AAP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+      if (selectedValue == 2) {
+        // img1.src = "{{url_for('static',filename='img/UK/UK-INC2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UK/UK-INC1.png')}}"
+        // headTag.innerHTML = "UK INC"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-UKINC/UK-INC?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+    }
+    if (name === "Manipur") {
+
+      if (selectedValue == "result") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-BJP1.png')}}"
+        // headTag.innerHTML = "UP BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/Manipur_16504864272650/Dashboard2?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+      }
+
+      if (selectedValue == 1) {
+        // img1.src = "{{url_for('static',filename='img/Manipur/Manipur-BJP2.jpg')}}"
+        // img2.src = "{{url_for('static',filename='img/Manipur/Manipur-BJP1.jpg')}}"
+        // headTag.innerHTML = "Manipur BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-ManipurBJP/Manipur-BJP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+      if (selectedValue == 3) {
+        // img1.src = "{{url_for('static',filename='img/Manipur/Manipur-NPF2.jpg')}}"
+        // img2.src = "{{url_for('static',filename='img/Manipur/Manipur-NPF1.jpg')}}"
+        // headTag.innerHTML = "Manipur NPF"
+        // img1.style.width = "60rem"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-ManipurNPF/Manipur-NPF?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+      if (selectedValue == 2) {
+        // img1.src = "{{url_for('static',filename='img/Manipur/Manipur-INC2.jpg')}}"
+        // img2.src = "{{url_for('static',filename='img/Manipur/Manipur-INC1.jpg')}}"
+        // headTag.innerHTML = "Manipur INC"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-ManipurINC/Manipur-INC?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+
+      }
+    }
+    if (name === "Goa") {
+
+      if (selectedValue == "result") {
+        // img1.src = "{{url_for('static',filename='img/UP/UP-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/UP/UP-BJP1.png')}}"
+        // headTag.innerHTML = "UP BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/Goa_16504752674710/Dashboard1?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+      }
+
+      if (selectedValue == 1) {
+        // img1.src = "{{url_for('static',filename='img/Goa/Goa-BJP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/Goa/Goa-BJP1.png')}}"
+        // headTag.innerHTML = "Goa BJP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-GoaBJP/Goa-BJP?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+      if (selectedValue == 2) {
+        // img1.src = "{{url_for('static',filename='img/Goa/Goa-INC2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/Goa/Goa-INC1.png')}}"
+        // headTag.innerHTML = "Goa INC"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+
+
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis-GoaINC/Goa-INC?:language=en-US&publish=yes&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+      if (selectedValue == 3) {
+        // img1.src = "{{url_for('static',filename='img/Goa/Goa-AAP2.png')}}"
+        // img2.src = "{{url_for('static',filename='img/Goa/Goa-AAP1.png')}}"
+        // headTag.innerHTML = "Goa AAP"
+        // document.getElementById('div1').setAttribute("style", "margin-left:150px");
+        // img1.style.width = "60rem"
+        document.getElementById("tableau").src = "https://public.tableau.com/views/ElectionAnalysis_16503129655500/Goa-AAP?:language=en-US&:display_count=n&:toolbar=no&:showShareOptions=false&:origin=viz_share_link&:showVizHome=no&:embed=true"
+
+      }
+    }
+  }
+</script>
+
+<!-- End Graph  -->
+
+
+{% endblock body %}
